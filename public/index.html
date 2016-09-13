@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>turfv1</title>
+</head>
+
+<body>
+
+<h1 id ="bigOne"></h1>
+<h2> Travis MOTHERFUCKER </h2>
+
+
+<script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCQC0Z1hGjiGvRLtYKoTOiccUzZExV4sqw",
+    authDomain: "turfv1-4b71d.firebaseapp.com",
+    databaseURL: "https://turfv1-4b71d.firebaseio.com",
+    storageBucket: "turfv1-4b71d.appspot.com",
+  };
+  firebase.initializeApp(config);
+
+  var bigOne = document.getElementById('bigOne');
+  var dbRef = firebase.database().ref().child('text');
+  dbRef.on('value', snap => bigOne.innerText = snap.val());
+</script>
+
+</body>
+
+</html>
