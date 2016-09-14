@@ -4,42 +4,29 @@
 <head>
     <meta charset="utf-8">
     <title>turfv1</title>
-    <script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
-    <h1 id="bigOne"></h1>
-    <h2> turf + Firebase + Travis </h2>
+<h1 id ="bigOne"></h1>
+<h2> Firebase + Travis </h2>
 
-    <div class="container">
-        <input id="txtEmail" type="email" placeholder="Email">
 
-        <input id="txtPassword" type="password" placeholder="password">
+<script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCQC0Z1hGjiGvRLtYKoTOiccUzZExV4sqw",
+    authDomain: "turfv1-4b71d.firebaseapp.com",
+    databaseURL: "https://turfv1-4b71d.firebaseio.com",
+    storageBucket: "turfv1-4b71d.appspot.com",
+  };
+  firebase.initializeApp(config);
 
-        <button id="btnLogin" class="btn btn-action">
-    Log in
-  </button>
-
-        <button id="btnSignup" class="btn btn-secondary">
-    Sign up
-  </button>
-
-        <button id="btnLogout" class="btn btn-action hide">
-    Log out
-  </button>
-    </div>
-
-    <script src="app.js"></script>
+  var bigOne = document.getElementById('bigOne');
+  var dbRef = firebase.database().ref().child('text');
+  dbRef.on('value', snap => bigOne.innerText = snap.val());
+</script>
 
 </body>
 
