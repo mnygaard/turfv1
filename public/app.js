@@ -7,8 +7,8 @@
         storageBucket: "turfv1-4b71d.appspot.com",
     }; firebase.initializeApp(config);
 
-    var bigOne = document.getElementById('bigOne');
-    var dbRef = firebase.database().ref().child('text'); dbRef.on('value', snap => bigOne.innerText = snap.val());
+    // var bigOne = document.getElementById('bigOne');
+    // var dbRef = firebase.database().ref().child('text'); dbRef.on('value', snap => bigOne.innerText = snap.val());
 
     // Get elements
     const txtEmail = document.getElementById('txtEmail');

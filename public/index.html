@@ -4,40 +4,69 @@
 <head>
     <meta charset="utf-8">
     <title>turfv1</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="//code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
-    <h1 id="bigOne"></h1>
-    <h2> turf + Firebase + Travisv1 </h2>
 
-    <div class="container">
-        <input id="txtEmail" type="email" placeholder="Email">
 
-        <input id="txtPassword" type="password" placeholder="password">
+    <div class="mdl-grid">
+        <!-- GRID DIV -->
+        <div class="mdl-cell mdl-cell--4-col"></div>
 
-        <button id="btnLogin" class="btn btn-action">
-    Log in
-  </button>
+        <!-- GRID DIV -->
+        <div class="mdl-cell mdl-cell--4-col">
+            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text ">turf</h2>
+                </div>
+                <!-- Textfield with Floating Label -->
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" id="txtEmail" type="email">
+                    <label class="mdl-textfield__label" for="txtEmail">email...</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" id="txtPassword" type="password">
+                    <label class="mdl-textfield__label" for="txtEmail">password...</label>
+                </div>
 
-        <button id="btnSignup" class="btn btn-secondary">
-    Sign up
-  </button>
 
-        <button id="btnLogout" class="btn btn-action hide">
-    Log out
-  </button>
+                <div class="mdl-card__actions mdl-card--border">
+                    <!-- Textfield with Floating Label -->
+                    <button id="btnLogin" class="mdl-button mdl-js-button mdl-button--raised">
+                      Log in
+                    </button>
+
+                    <button id="btnSignup" class="mdl-button mdl-js-button mdl-button--raised">
+                      Sign up
+                    </button>
+
+                    <button id="btnLogout" class="mdl-button mdl-js-button mdl-button--raised" disabled>
+                      Log out
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- GRID DIV -->
+        <div class="mdl-cell mdl-cell--4-col"></div>
     </div>
+
+
+
+
+
+
+
 
     <script src="app.js"></script>
 
