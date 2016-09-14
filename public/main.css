@@ -1,0 +1,21 @@
+body {
+  background-color: rgb(250,250,250);
+}
+
+.card-padding {
+  padding: 200px 0 0 0;
+}
+
+.card-wide.mdl-card {
+  width: 512px;
+}
+
+.card-wide > .mdl-card__title {
+  color: #fff;
+  height: 100px;
+  background: url('https://cdn-images-1.medium.com/max/2000/1*ntcyUXOd_89Ozw75dDGEqw.png') center / cover;
+}
+
+.mdl-card__title-text {
+  font-weight: 400;
+}
