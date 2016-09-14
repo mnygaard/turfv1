@@ -7,9 +7,6 @@
         storageBucket: "turfv1-4b71d.appspot.com",
     }; firebase.initializeApp(config);
 
-    // var bigOne = document.getElementById('bigOne');
-    // var dbRef = firebase.database().ref().child('text'); dbRef.on('value', snap => bigOne.innerText = snap.val());
-
     // Get elements
     const txtEmail = document.getElementById('txtEmail');
     const txtPassword = document.getElementById('txtPassword');
@@ -49,11 +46,13 @@
     firebase.auth().onAuthStateChanged(firebaseUser => {
       if(firebaseUser) {
         console.log(firebaseUser);
-        btnLogout.classList.remove('hide');
+        // btnLogout.style.display = 'block';
+        btnLogout.disabled = false;
       }
       else {
         console.log('not logged in');
-        btnLogout.classList.add('hide');
+        // btnLogout.style.display = 'none';
+        btnLogout.disabled = true;
       }
     });
 
