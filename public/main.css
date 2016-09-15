@@ -11,11 +11,11 @@ body {
 }
 
 .card-wide > .mdl-card__title {
-  color: #fff;
-  height: 100px;
-  background: url('https://cdn-images-1.medium.com/max/2000/1*ntcyUXOd_89Ozw75dDGEqw.png') center / cover;
 }
 
 .mdl-card__title-text {
-  font-weight: 400;
 }
+
+/*
+TODO: Modify for mobile devices
+*/
