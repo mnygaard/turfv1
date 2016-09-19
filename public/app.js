@@ -27,10 +27,9 @@
         // Sign in
         const promise = auth.signInWithEmailAndPassword(email, pass);
         promise.catch(e => (console.log(e.message)));
-        // TODO: FIX ERROR MESSAGE SNACKBOX
         'use strict';
         var data = {
-            message: 'txt'
+            message: 'User' + ' ' + txtEmail.value + ' ' + 'logged in'
         };
         snackbarContainer.MaterialSnackbar.showSnackbar(data);
     });
@@ -58,11 +57,12 @@
         if (firebaseUser) {
             console.log(firebaseUser);
             console.log('logged in');
-            // btnLogout.style.display = 'block';
+            btnLogout.style.visibility = 'visible';
             btnLogout.disabled = false;
+
         } else {
             console.log('not logged in');
-            // btnLogout.style.display = 'none';
+            btnLogout.style.visibility = 'hidden';
             btnLogout.disabled = true;
         }
     });

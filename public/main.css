@@ -3,11 +3,11 @@ body {
 }
 
 .card-padding {
-  padding: 200px 0 0 0;
+  padding: 300px 0 0 0;
 }
 
 .card-wide.mdl-card {
-  width: 512px;
+  width: 400px;
 }
 
 .card-wide > .mdl-card__title {
@@ -16,6 +16,9 @@ body {
 .mdl-card__title-text {
 }
 
+#btnSignup {
+  visibility: hidden;
+}
 /*
 TODO: Modify for mobile devices
 */
