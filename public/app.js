@@ -27,16 +27,19 @@
         // Sign in
         const promise = auth.signInWithEmailAndPassword(email, pass);
         promise.catch(e => (console.log(e.message)));
-        'use strict';
-        var data = {
-            message: 'User' + ' ' + txtEmail.value + ' ' + 'logged in'
-        };
-        snackbarContainer.MaterialSnackbar.showSnackbar(data);
+
+
+        // TODO: Bug - Displays emailtxt and not the user.
+        // 'use strict';
+        // var data = {
+        //     message: 'User' + ' ' + txtEmail.value + ' ' + 'logged in'
+        // };
+        // snackbarContainer.MaterialSnackbar.showSnackbar(data);
     });
 
     // Add signup event
     // Get email and password
-    // TODO: Check for real email
+    // TODO: Authenticate email
     btnSignup.addEventListener('click', e => {
         const email = txtEmail.value;
         const pass = txtPassword.value;
@@ -66,6 +69,8 @@
             btnLogout.disabled = true;
         }
     });
+
+    user = firebase.getEmail();
 
 
 
