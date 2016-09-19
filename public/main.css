@@ -22,6 +22,11 @@ body {
 #btnSignup {
   visibility: hidden;
 }
+
+.center-inner {
+  width: 50%;
+  margin: 0 auto; 
+}
 /*
 TODO: Modify for mobile devices
 */
