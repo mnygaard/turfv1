@@ -70,7 +70,7 @@
         }
     });
 
-    user = firebase.getEmail();
+    // user = firebase.getEmail();
 
 
 
