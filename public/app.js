@@ -2,6 +2,7 @@
     'use strict';
     var snackbarContainer = document.querySelector('#demo-toast-example');
     var showToastButton = document.querySelector('#demo-show-toast');
+
     // Initialize Firebase
     var config = {
         apiKey: "AIzaSyCQC0Z1hGjiGvRLtYKoTOiccUzZExV4sqw",
@@ -27,25 +28,16 @@
         // Sign in
         const promise = auth.signInWithEmailAndPassword(email, pass);
         promise.catch(e => (console.log(e.message)));
-
-
-        // TODO: Bug - Displays emailtxt and not the user.
-        // 'use strict';
-        // var data = {
-        //     message: 'User' + ' ' + txtEmail.value + ' ' + 'logged in'
-        // };
-        // snackbarContainer.MaterialSnackbar.showSnackbar(data);
     });
 
-    // Add signup event
-    // Get email and password
-    // TODO: Authenticate email
     btnSignup.addEventListener('click', e => {
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
         // Create user
         const promise = auth.createUserWithEmailAndPassword(email, pass);
+        var errorCode = error.code;
+        var errorMessage = error.message;
         promise.catch(e => console.log(e.message));
 
     });
@@ -62,16 +54,36 @@
             console.log('logged in');
             btnLogout.style.visibility = 'visible';
             btnLogout.disabled = false;
+            btnLogin.disabled = true;
+            var user = firebase.auth().currentUser;
+            var name, email, photoUrl, uid;
+            if (user != null) {
+              name = user.displayName;
+              email = user.email;
+              uid = user.uid;                     // The user's ID, unique to the Firebase project. Do NOT use
+              console.log(email);                 // this value to authenticate with your backend server, if
+
+
+            'use strict';
+            var data = {
+                message: 'User' + ' ' + user.email + ' ' + 'logged in'
+            };
+            snackbarContainer.MaterialSnackbar.showSnackbar(data);
+
+}
 
         } else {
-            console.log('not logged in');
             btnLogout.style.visibility = 'hidden';
             btnLogout.disabled = true;
+            btnLogin.disabled = false;
+
+            'use strict';
+            var data = {
+                message: 'not logged in'
+            };
+            snackbarContainer.MaterialSnackbar.showSnackbar(data);
+
         }
     });
-
-    // user = firebase.getEmail();
-
-
 
 }());
