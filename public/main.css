@@ -5,12 +5,20 @@ body {
 
 }
 
-.card-padding {
+.card-paddingv1 {
   padding: 300px 0 0 0;
+}
+
+.card-padding {
+  padding: 0 0 0 0;
 }
 
 .card-wide.mdl-card {
   width: 400px;
+}
+
+.card-wide.mdl-cardv1 {
+  width: 600px;
 }
 
 .card-wide > .mdl-card__title {

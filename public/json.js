@@ -4,28 +4,28 @@ $.ajax({
   dataType: 'json',
   type: 'GET',
 }).done(function(response) {
-  // do something with the response, e.g. isolate the id of a linked resource
-  // var regex = /.*?(\d+)$/; // the ? makes the first part non-greedy
-  // var res = regex.exec(response.fixtures[0]._links.awayTeam.href);
-  // var teamId = res[1];
-  var teamName = response.standing[0].teamName;
-  var position = response.standing[0].position;
-  var points = response.standing[0].points;
-  var badge = response.standing[0].crestURI;
-  document.getElementById("teamName").innerHTML = teamName;
-  document.getElementById("position").innerHTML = position;
-  document.getElementById("points").innerHTML = points;
-  var img = new Image();
-  img.src = badge;
-  img.setAttribute("style", "width:25px");
-  document.getElementById("badge").appendChild(img);
+  console.log(response);
+  // var badge = response.standing[0].crestURI;
 
-  for (i = 0; response.standing.length; i++ ) {
-    console.log(response.standing[i].teamName);
-    console.log(response.standing[i].points);
-  }
 
+  response.standing.forEach(function(entry) {
+    var table = document.getElementById("BPL");
+    var row = table.insertRow();
+
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+
+    var img = new Image();
+    img.setAttribute("style", "width:20px; height:20px");
+    img.setAttribute("src", entry.crestURI)
+
+    cell1.innerHTML = entry.position;
+    cell2.appendChild(img);
+    cell3.innerHTML = entry.teamName;
+    cell4.innerHTML = entry.points;
+
+
+  })
 });
-
-
-// http://api.football-data.org/v1/competitions/426/leagueTable
