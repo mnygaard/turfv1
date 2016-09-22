@@ -1,6 +1,6 @@
 $.ajax({
   headers: { 'X-Auth-Token': '5716265e0fea4e1b9583f371281e2a03' },
-  url: 'http://api.football-data.org/v1/competitions/426/leagueTable',
+  url: 'https://api.football-data.org/v1/competitions/426/leagueTable',
   dataType: 'json',
   type: 'GET',
 }).done(function(response) {
