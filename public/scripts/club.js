@@ -11,7 +11,7 @@ var squadSize;
 
 $.ajax({
   headers: { 'X-Auth-Token': '5716265e0fea4e1b9583f371281e2a03' },
-  url: 'http://api.football-data.org/v1/teams/57',
+  url: 'https://api.football-data.org/v1/teams/57',
   dataType: 'json',
   type: 'GET',
   async:false,
