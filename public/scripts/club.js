@@ -31,7 +31,10 @@ String.prototype.splice = function(idx, rem, str) {
 
 var splicedFixtureUrl = fixturesUrl.splice(4, 0, "s");
 var splicedTeamUrl = teamUrl.splice(4, 0, "s");
-console.log(splicedFixtureUrl); // "foo bar baz"
+var splicedBadge = badge.splice(4, 0, "s");
+console.log(splicedFixtureUrl);
+console.log(splicedTeamUrl);
+
 
 
 $.ajax({
@@ -66,7 +69,7 @@ $.ajax({
 // SETTING IMAGE
 var img = new Image();
 img.setAttribute("style", "width:150px; height:150px");
-img.setAttribute("src", badge);
+img.setAttribute("src", splicedBadge);
 document.getElementById("img").appendChild(img);
 // PRINTS IN HTML
 document.getElementById("name").innerHTML = name;
