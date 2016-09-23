@@ -25,9 +25,18 @@ $.ajax({
 
 });
 
+String.prototype.splice = function(idx, rem, str) {
+    return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+};
+
+var splicedFixtureUrl = fixturesUrl.splice(4, 0, "s");
+var splicedTeamUrl = teamUrl.splice(4, 0, "s");
+console.log(splicedFixtureUrl); // "foo bar baz"
+
+
 $.ajax({
   headers: { 'X-Auth-Token': '5716265e0fea4e1b9583f371281e2a03' },
-  url: fixturesUrl,
+  url: splicedFixtureUrl,
   dataType: 'json',
   type: 'GET',
   async: false,
@@ -45,7 +54,7 @@ $.ajax({
 
 $.ajax({
   headers: { 'X-Auth-Token': '5716265e0fea4e1b9583f371281e2a03' },
-  url: teamUrl,
+  url: splicedTeamUrl,
   dataType: 'json',
   type: 'GET',
   async: false,
