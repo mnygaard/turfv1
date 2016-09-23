@@ -9,7 +9,7 @@ $.ajax({
 
 
   response.standing.forEach(function(entry) {
-    var table = document.getElementById("BPL");
+    var table = document.getElementById("jsontable");
     var row = table.insertRow();
 
     var cell1 = row.insertCell(0);

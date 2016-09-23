@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
     <meta charset="utf-8">
@@ -11,12 +10,11 @@
     <link rel="stylesheet" href="./material/material.min.css">
     <script src="./material/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
 
 </head>
-
 <body>
     <div class="mdl-grid">
         <!-- GRID DIV -->
@@ -31,13 +29,13 @@
                     <table  class="mdl-data-table  mdl-js-data-table mdl-shadow--2dp max-width">
                         <thead>
                             <tr>
-                                <th class="mdl-data-table__cell--non-numeric mdl-data-table--selectable">Position</th>
-                                <th>Badge</th>
-                                <th class="mdl-data-table__cell--non-numeric">Team</th>
-                                <th>Points</th>
+                                <th class="mdl-data-table__cell--non-numeric mdl-data-table--selectable">Competition</th>
+                                <th >Number of Teams</th>
+                                <th>Current Matchday</th>
+                                <th>Number of Matchdays</th>
                             </tr>
                         </thead>
-                        <tbody id="BPL"></tbody>
+                        <tbody id="jsontable"></tbody>
                     </table>
 
                 </div>
@@ -46,9 +44,6 @@
         <!-- GRID DIV -->
         <div class="mdl-cell mdl-cell--4-col"></div>
     </div>
-
-    <script src="json.js"></script>
-
+    <script src="/scripts/leagues.js"></script>
 </body>
-
 </html>
