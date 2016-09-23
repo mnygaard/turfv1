@@ -23,22 +23,27 @@
         <div class="mdl-cell mdl-cell--4-col card-padding">
             <div class="card-wide mdl-card mdl-shadow--6dp center-inner">
                 <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
-                    <h2 id="name" class="mdl-card__title-text ">turf.</h2>
+                  <div id="img"> </div>  <h2 id="name" class="mdl-card__title-text ">turf.</h2>
                 </div>
-                <ul class="demo-list-item mdl-list">
-                    <li class="mdl-list__item">
-                      <i class="material-icons mdl-list__item-icon">person</i>
 
-                        <span id="value" class="mdl-list__item-primary-content">
-
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span id="squadSize" class="mdl-list__item-primary-content"></span>
-                    </li>
-                </ul>
-                <div id="img"> </div>
-
+                <table  class="mdl-data-table  mdl-js-data-table mdl-shadow--2dp max-width">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric mdl-data-table--selectable">Short Name</th>
+                            <th class="mdl-data-table__cell--non-numeric mdl-data-table--selectable">Squad Market Value</th>
+                            <th class="mdl-data-table__cell--non-numeric mdl-data-table--selectable">Squad Size</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td id="shortName"></td>
+                        <td id="value"></td>
+                        <td id="squadSize"></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                </table>
             </div>
             <!-- GRID DIV -->
             <div class="mdl-cell mdl-cell--4-col"></div>
