@@ -21,6 +21,8 @@ body {
   width: 800px;
 }
 
+
+
 .card-wide > .mdl-card__title {
 }
 
@@ -38,4 +40,8 @@ body {
 
 .max-width {
   width: 100%;
+}
+
+.max-height {
+  height: 1000px;
 }
