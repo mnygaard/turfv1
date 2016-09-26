@@ -10,7 +10,7 @@ var value;
 var teamUrl;
 var squadSize;
 var clubUrl = 'https://api.football-data.org/v1/teams/';
-var clubId = 66;
+var clubId = 87;
 
 String.prototype.splice = function(idx, rem, str) {
     return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
