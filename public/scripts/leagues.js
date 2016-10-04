@@ -27,10 +27,12 @@ $.ajax({
     // img.setAttribute("style", "width:20px; height:20px");
     // img.setAttribute("src", entry.crestURI)
 
+
     cell1.innerHTML = entry.caption;
     cell2.innerHTML = entry.numberOfTeams;
     cell3.innerHTML = entry.currentMatchday;
     cell4.innerHTML = entry.numberOfMatchdays;
+
 };
 
   })

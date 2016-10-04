@@ -22,16 +22,16 @@
         <!-- GRID DIV -->
         <div class="mdl-cell mdl-cell--4-col card-padding">
             <div class="card-wide mdl-cardv1 mdl-shadow--6dp center-inner max-height ">
-                <div class="mdl-card__title mdl-color--primary mdl-color-text--white mdl-layout--fixed-header ">
+                <div class="mdl-card__title mdl-color--primary mdl-color-text--white  ">
                   <div id="img"> </div>  <h2 id="name" class="mdl-card__title-text ">turf.</h2>
                 </div>
 
                 <table  class="mdl-data-table  mdl-js-data-table mdl-shadow--2dp max-width">
                     <thead>
                         <tr>
-                            <th class="mdl-data-table--selectable">Short Name</th>
-                            <th class="mdl-data-table--selectable">Squad Market Value</th>
-                            <th class="mdl-data-table--selectable">Squad Size</th>
+                            <th class="mdl-data-table__cell mdl-data-table__cell--non-numeric mdl-data-table--selectable">Short Name</th>
+                            <th class="mdl-data-table__cell mdl-data-table--selectable">Squad Market Value</th>
+                            <th class="mdl-data-table__cell mdl-data-table__cell--non-numeric mdl-data-table--selectable">Squad Size</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -43,14 +43,19 @@
                     </tbody>
                 </table>
 
-                <table id="playerTable" class="mdl-data-table  mdl-js-data-table mdl-shadow--2dp max-width ">
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+                  <input type="checkbox" id="switch-2" class="mdl-switch__input">
+                  <span class="mdl-switch__label"></span>
+                </label>
+
+                <table id="playerTable" class="mdl-data-table  mdl-js-data-table mdl-shadow--2dp max-width">
                   <thead>
                       <tr>
-                          <th class="mdl-data-table--selectable">Number</th>
-                          <th class="mdl-data-table__cell--non-numeric mdl-data-table--selectable">Name</th>
-                          <th class="mdl-data-table--selectable">Market Value</th>
-                          <th class="mdl-data-table__cell--non-numeric mdl-data-table--selectable">Nationality</th>
-                          <th class="mdl-data-table__cell--non-numeric mdl-data-table--selectable">Position</th>
+                          <th class="mdl-data-table__cell mdl-data-table--selectable">Number</th>
+                          <th class="mdl-data-table__cell mdl-data-table__cell--non-numeric mdl-data-table--selectable">Name</th>
+                          <th class="mdl-data-table__cell mdl-data-table--selectable">Market Value</th>
+                          <th class="mdl-data-table__cell mdl-data-table__cell--non-numeric mdl-data-table--selectable">Nationality</th>
+                          <th class="mdl-data-table__cell mdl-data-table__cell--non-numeric mdl-data-table--selectable">Position</th>
                       </tr>
                   </thead>
                   <tbody class="max-height">
