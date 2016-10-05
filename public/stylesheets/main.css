@@ -5,6 +5,10 @@ body {
 
 }
 
+.logo-size {
+  height: 75px;
+}
+
 .card-paddingv1 {
   padding: 300px 0 0 0;
 }
