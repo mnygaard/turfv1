@@ -66,3 +66,8 @@ body {
   /*overflow-x: hidden;
   overflow-y: auto;*/
 }
+
+.center-card {
+  margin: 25% 0 0 25%;
+  width: 350px;
+}
