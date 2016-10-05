@@ -76,11 +76,7 @@
             btnLogout.style.visibility = 'hidden';
             btnLogout.disabled = true;
             btnLogin.disabled = false;
-<<<<<<< HEAD
-            console.log('not logged in');
-=======
             console.log('Logged out');
->>>>>>> dev
             'use strict';
             var data = {
                 message: 'not logged in'
