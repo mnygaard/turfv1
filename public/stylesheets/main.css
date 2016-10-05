@@ -8,6 +8,9 @@ body {
 .background {
   background-image: url("/images/light_grassv1-blur.jpg");
   background-size: cover;
+  background-position: 0 0;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
 
 }
 
