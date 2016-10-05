@@ -30,17 +30,17 @@
         promise.catch(e => (console.log(e.message)));
     });
 
-    btnSignup.addEventListener('click', e => {
-        const email = txtEmail.value;
-        const pass = txtPassword.value;
-        const auth = firebase.auth();
-        // Create user
-        const promise = auth.createUserWithEmailAndPassword(email, pass);
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        promise.catch(e => console.log(e.message));
-
-    });
+    // btnSignup.addEventListener('click', e => {
+    //     const email = txtEmail.value;
+    //     const pass = txtPassword.value;
+    //     const auth = firebase.auth();
+    //     // Create user
+    //     const promise = auth.createUserWithEmailAndPassword(email, pass);
+    //     var errorCode = error.code;
+    //     var errorMessage = error.message;
+    //     promise.catch(e => console.log(e.message));
+    //
+    // });
 
     // Add logout event
     btnLogout.addEventListener('click', e => {
@@ -76,7 +76,11 @@
             btnLogout.style.visibility = 'hidden';
             btnLogout.disabled = true;
             btnLogin.disabled = false;
+<<<<<<< HEAD
             console.log('not logged in');
+=======
+            console.log('Logged out');
+>>>>>>> dev
             'use strict';
             var data = {
                 message: 'not logged in'
