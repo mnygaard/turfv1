@@ -5,6 +5,12 @@ body {
 
 }
 
+.background {
+  background-image: url("/images/light_grassv1-blur.jpg");
+  background-size: cover;
+
+}
+
 .logo-size {
   height: 75px;
 }
