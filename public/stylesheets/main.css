@@ -18,8 +18,15 @@ body {
   background-repeat:no-repeat;
 
 }*/
+.nav-color {
+  color: #2f9688;
+  background-color: #2f9688;
+}
 
-
+.nav-img {
+  height: 50px;
+  margin: 7px 0 5px 10px;
+}
 
 .logo-size {
   height: 75px;

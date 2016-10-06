@@ -12,6 +12,8 @@ var squadSize;
 var clubUrl = 'https://api.football-data.org/v1/teams/';
 var clubId = 64;
 
+
+
 String.prototype.splice = function(idx, rem, str) {
     return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
 };

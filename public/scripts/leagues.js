@@ -4,6 +4,7 @@ $.ajax({
   dataType: 'json',
   type: 'GET',
 }).done(function(response) {
+
   console.log(response);
   // var badge = response.standing[0].crestURI;
 
@@ -26,7 +27,6 @@ $.ajax({
     // var img = new Image();
     // img.setAttribute("style", "width:20px; height:20px");
     // img.setAttribute("src", entry.crestURI)
-
 
     cell1.innerHTML = entry.caption;
     cell2.innerHTML = entry.numberOfTeams;

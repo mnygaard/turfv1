@@ -62,13 +62,11 @@
               email = user.email;
               uid = user.uid;                     // The user's ID, unique to the Firebase project. Do NOT use
               console.log(email);                 // this value to authenticate with your backend server, if
+            var data =
+                'Status: User' + ' ' + user.email + ' ' + 'logged in'
+            ;
+            Materialize.toast(data, 4000)
 
-
-            'use strict';
-            var data = {
-                message: 'User' + ' ' + user.email + ' ' + 'logged in'
-            };
-            snackbarContainer.MaterialSnackbar.showSnackbar(data);
 
 }
 
@@ -78,10 +76,10 @@
             btnLogin.disabled = false;
             console.log('Logged out');
             'use strict';
-            var data = {
-                message: 'not logged in'
-            };
-            snackbarContainer.MaterialSnackbar.showSnackbar(data);
+            var data =
+                'Status: Logged out'
+            ;
+            Materialize.toast(data, 4000);
 
         }
     });
